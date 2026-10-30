@@ -1,0 +1,129 @@
+/* ページ全体：やさしいクリーム色の背景 */
+body {
+  margin: 0;
+  padding: 40px 16px;
+  background-color: #fdf6ec;
+  color: #5a4a42;
+  font-family: "Hiragino Sans", "Meiryo", sans-serif;
+  line-height: 1.8;
+}
+
+/* 中央に置く白いカード */
+.card {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(180, 150, 120, 0.2);
+}
+
+/* ページのタイトル */
+h1 {
+  margin-top: 0;
+  text-align: center;
+  color: #e8a598;
+}
+
+/* 各項目の見出し：やわらかい緑のライン */
+h2 {
+  margin-bottom: 4px;
+  padding-left: 10px;
+  border-left: 5px solid #a8d5ba;
+  font-size: 1.1rem;
+  color: #6b8f7b;
+}
+
+/* 項目の中身 */
+p {
+  margin-top: 0;
+  padding-left: 15px;
+}
+
+/* 写真を置く枠：点線の囲み（中に <img> を入れると枠いっぱいに表示） */
+.photo-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 15px);
+  max-width: 240px;
+  height: 140px;
+  margin-left: 15px;
+  box-sizing: border-box;
+  border: 2px dashed #a8d5ba;
+  border-radius: 24px;
+  background-color: #f5fbf7;
+  color: #6b8f7b;
+  font-size: 0.9rem;
+  overflow: hidden;
+}
+
+/* 枠の中に入れた写真は、枠に合わせて表示する */
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 訪問者数カウンター：ページの下に中央寄せで表示（見た目だけ） */
+.counter {
+  max-width: 480px;
+  margin: 24px auto 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #8a7a70;
+}
+
+/* 数字を並べる部分 */
+.counter-digits {
+  display: inline-flex;
+  gap: 3px;
+  margin: 0 6px;
+  vertical-align: middle;
+}
+
+/* 1桁ごとの黒いパネル（カウンター風） */
+.digit {
+  display: inline-block;
+  min-width: 1.4em;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: #4a3f3a;
+  color: #fdf6ec;
+  font-family: "Courier New", monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* スマホ（幅600px以下）向けの調整 */
+@media (max-width: 600px) {
+  /* 余白を小さくして、文章の表示幅を広く確保する */
+  body {
+    padding: 20px 12px;
+    line-height: 1.7;
+  }
+
+  .card {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  /* タイトルが長くても画面に収まるように小さめにする */
+  h1 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  /* 写真の枠は画面幅いっぱいに広げる */
+  .photo-frame {
+    max-width: none;
+    height: 160px;
+  }
+
+  /* カウンターは文字と余白を少し小さくする */
+  .counter {
+    margin-top: 16px;
+    font-size: 0.85rem;
+  }
+}
